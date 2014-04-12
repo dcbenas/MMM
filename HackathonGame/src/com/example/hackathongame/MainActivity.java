@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	private EditText username, password;
-	private String uid, pass;
 	private Button doLogin;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
