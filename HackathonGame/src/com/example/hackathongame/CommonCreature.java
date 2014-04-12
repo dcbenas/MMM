@@ -4,10 +4,10 @@ public class CommonCreature implements Creature{
 	
 	private String name, imageID;
 	private String[] stats = new String[3];
-	private String[] rollSet = new String[4];
+	private int[] rollSet = new int[4];
 	private int rarity;
 	
-	public CommonCreature (String nameID, int rarityID, String[] statList, String[] rolls){
+	public CommonCreature (String nameID, int rarityID, String[] statList, int[] rolls){
 		this.name = nameID;
 		this.rarity = rarityID;
 		this.stats = statList;
@@ -49,12 +49,12 @@ public class CommonCreature implements Creature{
 		this.imageID = imgID;
 	}
 
-	public String[] getRollSet() {
+	public int[] getRollSet() {
 		return rollSet;
 	}
 
-	public void setRollSet(String[] rollSet) {
-		this.rollSet = rollSet;
+	public void setRollSet(int[] rolls) {
+		this.rollSet = rolls;
 	}
 
 }
