@@ -7,10 +7,11 @@ public class CommonCreature implements Creature{
 	private String[] rollSet = new String[4];
 	private int rarity;
 	
-	public CommonCreature (String nameID, int rarityID, String[] statList){
+	public CommonCreature (String nameID, int rarityID, String[] statList, String[] rolls){
 		this.name = nameID;
 		this.rarity = rarityID;
 		this.stats = statList;
+		this.setRollSet(rolls);
 	}
 	
 	@Override
@@ -46,6 +47,14 @@ public class CommonCreature implements Creature{
 	@Override
 	public void setImageID(String imgID) {
 		this.imageID = imgID;
+	}
+
+	public String[] getRollSet() {
+		return rollSet;
+	}
+
+	public void setRollSet(String[] rollSet) {
+		this.rollSet = rollSet;
 	}
 
 }
