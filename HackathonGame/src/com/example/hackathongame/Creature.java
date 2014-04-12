@@ -2,7 +2,7 @@ package com.example.hackathongame;
 
 public interface Creature {
 	String getName();
-	String[] getStats();
+	int[] getStats();
 	int getRarity();
 	String getImageID();
 	void setName(String name);

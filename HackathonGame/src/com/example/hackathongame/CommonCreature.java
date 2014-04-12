@@ -3,11 +3,11 @@ package com.example.hackathongame;
 public class CommonCreature implements Creature{
 	
 	private String name, imageID;
-	private String[] stats = new String[3];
+	private int[] stats = new int[3];
 	private int[] rollSet = new int[4];
 	private int rarity;
 	
-	public CommonCreature (String nameID, int rarityID, String[] statList, int[] rolls){
+	public CommonCreature (String nameID, int rarityID, int[] statList, int[] rolls){
 		this.name = nameID;
 		this.rarity = rarityID;
 		this.stats = statList;
@@ -20,7 +20,7 @@ public class CommonCreature implements Creature{
 	}
 
 	@Override
-	public String[] getStats() {
+	public int[] getStats() {
 		return stats;
 	}
 
