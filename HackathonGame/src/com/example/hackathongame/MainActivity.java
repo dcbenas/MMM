@@ -3,6 +3,7 @@ package com.example.hackathongame;
 import android.os.Bundle;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 
 import android.view.Menu;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
 	private EditText username, password;
 	private Button doLogin;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -28,6 +30,7 @@ public class MainActivity extends Activity {
 		doLogin.setOnClickListener(loginListener);
 
 	}
+
 	private OnClickListener loginListener = new OnClickListener(){
 		public void onClick(View v){
 			if (username.getText().toString().equals("admin") && password.getText().toString().equals("password")){
