@@ -42,12 +42,31 @@ public class EncounterScreen extends Activity {
 	};
 	private OnClickListener fightListener = new OnClickListener(){
 		public void onClick(View v){
-				Intent loggedIn = new Intent(getBaseContext(), MapScreen.class); //TODO: Change MapScreen.class to FightScreen.class
-				loggedIn.putExtra("rarity", rarityView.getText().toString());
-				loggedIn.putExtra("hp", hpView.getText().toString());
-				loggedIn.putExtra("ad", adView.getText().toString());
-				loggedIn.putExtra("def", defView.getText().toString());
-				startActivity(loggedIn); //TODO: Change to fitescreen
+				Intent win = new Intent(getBaseContext(), MapScreen.class); //TODO: Change MapScreen.class to FightScreen.class
+				Intent lose = new Intent(getBaseContext(), MapScreen.class);
+				win.putExtra("rarity", rarityView.getText().toString());
+				win.putExtra("hp", hpView.getText().toString());
+				win.putExtra("ad", adView.getText().toString());
+				win.putExtra("def", defView.getText().toString());
+				win.putExtra("adj1", adjective1.getText().toString());
+				win.putExtra("adj2", adjective2.getText().toString());
+				win.putExtra("name", name.getText().toString());
+
+				lose.putExtra("rarity", rarityView.getText().toString());
+				lose.putExtra("hp", hpView.getText().toString());
+				lose.putExtra("ad", adView.getText().toString());
+				lose.putExtra("def", defView.getText().toString());
+				lose.putExtra("adj1", adjective1.getText().toString());
+				lose.putExtra("adj2", adjective2.getText().toString());
+				lose.putExtra("name", name.getText().toString());
+				
+				rand = new Random();
+				if(rand.nextInt(1) == 1){
+					startActivity(win); //TODO: Change to fitescreen
+				}
+				else{
+					startActivity(lose); //TODO: Change to fitescreen
+				}
 		}
 	};
 	private OnClickListener runListener = new OnClickListener(){
