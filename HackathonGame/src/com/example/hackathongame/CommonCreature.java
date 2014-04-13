@@ -15,7 +15,7 @@ public class CommonCreature implements Creature{
 		this.stats = statList;
 		this.setRollSet(rolls);
 	}
-	
+
 	@Override
 	public String getName() {
 		return name;

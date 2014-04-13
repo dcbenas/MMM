@@ -24,6 +24,8 @@ import android.location.LocationManager;
 import android.content.Context;
 import android.graphics.Color;
 
+import java.util.Random;
+
 public class MapScreen extends Activity {
 	
 	
@@ -35,11 +37,11 @@ public class MapScreen extends Activity {
 	private double lat;
 	private double lng;
 	private Marker yourMarker;
-
+	public double[][] markerArray = new double[10][3];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-    	
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map_screen);
        
@@ -74,8 +76,18 @@ public class MapScreen extends Activity {
         	       }
         	       
         	       for (int i = 0; i<10; i++) {
+        	    	double moddedLat = lat + ((Math.random()*.008) - .004);
+        	    	double moddedLng = lng + ((Math.random()*.008) - .004);
+        	    	Random rand = new Random();
+        	    	int rar = rand.nextInt(5) + 1;
+        	    	String rare = Integer.toString(rar);
+        	    	markerArray[i][0] = moddedLat;
+        	    	markerArray[i][1] = moddedLng;
+        	    	markerArray[i][2] = rar;
+        	    	
            			Map.addMarker(new MarkerOptions()
-           				.position(new LatLng(lat + ((Math.random()*.008) - .004), lng + ((Math.random()*.008) - .004)))
+           				.position(new LatLng(moddedLat, moddedLng))
+           				.title(rare)
            				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
                            
         	       if (location != null) {

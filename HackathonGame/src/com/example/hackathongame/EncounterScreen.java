@@ -97,6 +97,7 @@ public class EncounterScreen extends Activity {
 				hpView.setText("ERROR");
     	}
     }
+    
     private int generateRarity(){
     	int seed = rand.nextInt(5) + 1;
     	return seed;
