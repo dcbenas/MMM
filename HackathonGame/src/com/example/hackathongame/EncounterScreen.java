@@ -42,8 +42,7 @@ public class EncounterScreen extends Activity {
 	};
 	private OnClickListener fightListener = new OnClickListener(){
 		public void onClick(View v){
-				Intent win = new Intent(getBaseContext(), MapScreen.class); //TODO: Change MapScreen.class to FightScreen.class
-				Intent lose = new Intent(getBaseContext(), MapScreen.class);
+				Intent win = new Intent(getBaseContext(), WinScreen.class);
 				win.putExtra("rarity", rarityView.getText().toString());
 				win.putExtra("hp", hpView.getText().toString());
 				win.putExtra("ad", adView.getText().toString());
@@ -51,21 +50,15 @@ public class EncounterScreen extends Activity {
 				win.putExtra("adj1", adjective1.getText().toString());
 				win.putExtra("adj2", adjective2.getText().toString());
 				win.putExtra("name", name.getText().toString());
-
-				lose.putExtra("rarity", rarityView.getText().toString());
-				lose.putExtra("hp", hpView.getText().toString());
-				lose.putExtra("ad", adView.getText().toString());
-				lose.putExtra("def", defView.getText().toString());
-				lose.putExtra("adj1", adjective1.getText().toString());
-				lose.putExtra("adj2", adjective2.getText().toString());
-				lose.putExtra("name", name.getText().toString());
 				
 				rand = new Random();
-				if(rand.nextInt(1) == 1){
+				if(rand.nextBoolean()){
+					win.putExtra("winresult", "VICTORY!");
 					startActivity(win); //TODO: Change to fitescreen
 				}
 				else{
-					startActivity(lose); //TODO: Change to fitescreen
+					win.putExtra("winresult", "DEFEAT!");
+					startActivity(win);
 				}
 		}
 	};

@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".EncounterScreen" >
-
+ 
     <TextView
         android:id="@+id/encounter_creature_adj1"
         android:layout_width="wrap_content"
@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true"
         android:text="Creature Adj1"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
+ 
     <TextView
         android:id="@+id/encounter_creature_adj2"
         android:layout_width="wrap_content"
@@ -24,7 +24,7 @@
         android:layout_below="@+id/encounter_creature_adj1"
         android:text="Creature Adj2"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
+ 
     <TextView
         android:id="@+id/encounter_creature_type"
         android:layout_width="wrap_content"
@@ -33,7 +33,7 @@
         android:layout_centerHorizontal="true"
         android:text="Creature Type"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-
+ 
     <Button
         android:id="@+id/encounter_fight"
         android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:text="Fight!" />
-
+ 
     <Button
         android:id="@+id/encounter__run"
         android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
         android:layout_alignLeft="@+id/encounter_fight"
         android:layout_alignParentRight="true"
         android:text="Run!" />
-
+ 
     <Button
         android:id="@+id/encounter_debug"
         android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
         android:layout_above="@+id/encounter__run"
         android:layout_alignRight="@+id/encounter__run"
         android:text="Reroll" />
-
+ 
     <TextView
         android:id="@+id/encounter_hp"
         android:layout_width="wrap_content"
@@ -67,7 +67,7 @@
         android:layout_below="@+id/encounter_stats"
         android:text="HP:"
         android:textAppearance="?android:attr/textAppearanceSmall" />
-
+ 
     <TextView
         android:id="@+id/encounter_def"
         android:layout_width="wrap_content"
@@ -76,7 +76,7 @@
         android:layout_alignLeft="@+id/encounter_ad"
         android:text="Def:"
         android:textAppearance="?android:attr/textAppearanceSmall" />
-
+ 
     <TextView
         android:id="@+id/encounter_ad"
         android:layout_width="wrap_content"
@@ -85,7 +85,7 @@
         android:layout_alignTop="@+id/encounter__run"
         android:text="AD:"
         android:textAppearance="?android:attr/textAppearanceSmall" />
-
+ 
     <TextView
         android:id="@+id/encounter_hp_display"
         android:layout_width="wrap_content"
@@ -95,7 +95,7 @@
         android:layout_toRightOf="@+id/encounter_def"
         android:text="HP Amount"
         android:textAppearance="?android:attr/textAppearanceSmall" />
-
+ 
     <TextView
         android:id="@+id/encounter_ad_display"
         android:layout_width="wrap_content"
@@ -105,7 +105,7 @@
         android:layout_alignLeft="@+id/encounter_hp_display"
         android:text="AD Amount"
         android:textAppearance="?android:attr/textAppearanceSmall" />
-
+ 
     <TextView
         android:id="@+id/encounter_def_display"
         android:layout_width="wrap_content"
@@ -114,7 +114,7 @@
         android:layout_alignLeft="@+id/encounter_ad_display"
         android:text="Def Amount"
         android:textAppearance="?android:attr/textAppearanceSmall" />
-
+ 
     <TextView
         android:id="@+id/encounter_rarity"
         android:layout_width="wrap_content"
@@ -124,7 +124,7 @@
         android:layout_alignLeft="@+id/encounter_def"
         android:text="Rarity:"
         android:textAppearance="?android:attr/textAppearanceSmall" />
-
+ 
     <TextView
         android:id="@+id/encounter_stats"
         android:layout_width="wrap_content"
@@ -133,7 +133,7 @@
         android:layout_alignTop="@+id/encounter_debug"
         android:text="Stats:"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
+ 
     <TextView
         android:id="@+id/encounter_rarity_display"
         android:layout_width="wrap_content"
@@ -143,13 +143,14 @@
         android:layout_toRightOf="@+id/encounter_stats"
         android:text="Rarity Level"
         android:textAppearance="?android:attr/textAppearanceSmall" />
-
+ 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/encounter_hp"
+        android:layout_alignBottom="@+id/encounter_stats"
+        android:layout_below="@+id/encounter_creature_type"
         android:layout_centerHorizontal="true"
         android:src="@drawable/creature1" />
-
+ 
 </RelativeLayout>

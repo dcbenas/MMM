@@ -55,6 +55,11 @@
             android:name="com.example.hackathongame.EncounterScreen"
             android:label="@string/title_activity_encounter_screen" >
         </activity>
+        
+        <activity
+            android:name="com.example.hackathongame.WinScreen"
+            android:label="@string/title_activity_encounter_screen" >
+        </activity>
     </application>
 
 </manifest>
