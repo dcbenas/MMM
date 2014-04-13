@@ -60,16 +60,6 @@
         android:text="Reroll" />
 
     <TextView
-        android:id="@+id/encounter_stats"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignTop="@+id/encounter_debug"
-        android:layout_marginLeft="41dp"
-        android:text="Stats:"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
         android:id="@+id/encounter_hp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -136,13 +126,30 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
+        android:id="@+id/encounter_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/encounter_hp"
+        android:layout_alignTop="@+id/encounter_debug"
+        android:text="Stats:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
         android:id="@+id/encounter_rarity_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/encounter_rarity"
         android:layout_alignBottom="@+id/encounter_rarity"
-        android:layout_alignLeft="@+id/encounter_stats"
+        android:layout_toRightOf="@+id/encounter_stats"
         android:text="Rarity Level"
         android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/encounter_hp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/creature1" />
 
 </RelativeLayout>
