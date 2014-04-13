@@ -1,6 +1,7 @@
 package com.example.hackathongame;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -12,25 +13,17 @@ import android.content.Intent;
 import java.util.Random;
 
 public class EncounterScreen extends Activity {
-	
-    TextView adjective1 = (TextView) findViewById(R.id.encounter_creature_adj1);
-    TextView adjective2 = (TextView) findViewById(R.id.encounter_creature_adj2);
-    TextView rarityView = (TextView) findViewById(R.id.encounter_rarity_display);
-    TextView hpView = (TextView) findViewById(R.id.encounter_hp_display);
-    TextView adView = (TextView) findViewById(R.id.encounter_ad_display);
-    TextView defView = (TextView) findViewById(R.id.encounter_def_display);
-    TextView name = (TextView) findViewById(R.id.encounter_creature_type);
-    
-    Button reroll = (Button) findViewById(R.id.encounter_debug);
-    Button fite = (Button) findViewById(R.id.encounter_fight);
-    Button run = (Button) findViewById(R.id.encounter_fight);
-    
-    Random rand = new Random();
+	TextView adjective1, adjective2, rarityView, hpView, adView, defView, name;
+    Random rand;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map_screen);
+        setContentView(R.layout.activity_encounter_screen);
+        
+        Button reroll = (Button) findViewById(R.id.encounter_debug);
+        Button fite = (Button) findViewById(R.id.encounter_fight);
+        Button run = (Button) findViewById(R.id.encounter__run);
         
         reroll.setOnClickListener(rerollListener);
         fite.setOnClickListener(fightListener);
@@ -62,6 +55,14 @@ public class EncounterScreen extends Activity {
 	};
 	
     private void generateAndDisplayName(){
+    	adjective1 = (TextView) findViewById(R.id.encounter_creature_adj1);
+        adjective2 = (TextView) findViewById(R.id.encounter_creature_adj2);
+        rarityView = (TextView) findViewById(R.id.encounter_rarity_display);
+        hpView = (TextView) findViewById(R.id.encounter_hp_display);
+        adView = (TextView) findViewById(R.id.encounter_ad_display);
+        defView = (TextView) findViewById(R.id.encounter_def_display);
+        name = (TextView) findViewById(R.id.encounter_creature_type);
+        
         adjective1.setText(Generator.generateAdj());
         adjective2.setText(Generator.generateAdj());
         name.setText(Generator.generateName());
@@ -99,7 +100,8 @@ public class EncounterScreen extends Activity {
     }
     
     private int generateRarity(){
-    	int seed = rand.nextInt(5) + 1;
+    	rand = new Random();
+    	int seed = rand.nextInt(4) + 1;
     	return seed;
     }
     

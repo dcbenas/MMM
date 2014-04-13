@@ -122,12 +122,12 @@ public class Generator {
 	static String adj2 = generateAdj();
 
 	public static String generateName() {
-		int seed = rand.nextInt(nameDict.length + 1);
+		int seed = rand.nextInt(nameDict.length-1);
 		return nameDict[seed];
 	}
 
 	public static String generateAdj() {
-		int seed = rand.nextInt(adjDict.length + 1);
+		int seed = rand.nextInt(adjDict.length-1);
 		return adjDict[seed];
 	}
 }
