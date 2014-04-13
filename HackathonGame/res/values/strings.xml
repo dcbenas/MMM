@@ -7,5 +7,6 @@
     <string name="login_username_hint">username</string>
     <string name="login_password_hint">password</string>
     <string name="title_activity_map_screen">Map Screen</string>
+    <string name="title_activity_encounter_screen">EncounterScreen</string>
 
 </resources>
