@@ -23,7 +23,7 @@ public class Generator {
 			"Apocalyptic beast", "Apotamkin", "Apotharni", "Aranda", "Arassas",
 			"Araxa", "Araxa Junior", "Arctophonos", "Arepyiai", "Arges",
 			"Argopelter", "Argus", "Aries", "Arimaspi", "Arimbi", "Arion",
-			"Arrach", "Arrak", "Arusha/Arushi", "Arzshenk", "Ascapard",
+			"Arrach", "Arrak", "Arusha", "Arushi", "Arzshenk", "Ascapard",
 			"Asena", "Ashuaps", "Asin", "Asipatra", "Aspidochelone", "Aspis",
 			"Asrai", "Asterion", "Astreus", "Astrid", "Astrope", "Aswang",
 			"Atcen", "Athach", "Atlas", "Audumla", "Aufhocker", "Augerino",

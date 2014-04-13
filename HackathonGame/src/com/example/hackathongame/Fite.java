@@ -5,6 +5,7 @@ public class Fite {
 	private int dmg, heal = 0;
 	private int phealth, aihealth;
 	private int[] pMoveset, aiMoveset;
+	
 	public void doFight(CommonCreature player, CommonCreature AI){
 		pMoveset = new int[player.getRarity()];
 		phealth = player.getStats()[0];
