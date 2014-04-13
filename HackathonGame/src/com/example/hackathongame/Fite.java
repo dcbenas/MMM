@@ -30,6 +30,11 @@ public class Fite {
 	
 	public void interpretMS(int[] msToInterpret){
 		//set dmg, set heal vars
+		int [] interpreted = new int[2];
+		//interpreted = someclass.interpret(msToInterpret); 
+		dmg = interpreted[0];
+		heal = interpreted[1];
+		
 	} 
 	public void applyDmg(int damage){
 		phealth -= damage;
